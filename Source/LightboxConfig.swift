@@ -1,8 +1,6 @@
 import UIKit
-import Hue
 import AVKit
 import AVFoundation
-import Imaginary
 
 public class LightboxConfig {
   /// Whether to show status bar while Lightbox is presented
@@ -20,16 +18,7 @@ public class LightboxConfig {
 
   /// How to load image onto UIImageView
   public static var loadImage: (UIImageView, URL, ((UIImage?) -> Void)?) -> Void = { (imageView, imageURL, completion) in
-
-    // Use Imaginary by default
-    imageView.setImage(url: imageURL, placeholder: nil, completion: { result in
-      switch result {
-      case .value(let image):
-        completion?(image)
-      case .error:
-        completion?(nil)
-      }
-    })
+    completion?(nil)
   }
 
   /// Indicator is used to show while image is being fetched
@@ -42,11 +31,11 @@ public class LightboxConfig {
 
   public struct PageIndicator {
     public static var enabled = true
-    public static var separatorColor = UIColor(hex: "3D4757")
+    public static var separatorColor = UIColor(red: 61/255.0, green: 71/255.0, blue: 87/255.0, alpha: 1.0)
 
     public static var textAttributes: [NSAttributedStringKey: Any] = [
       .font: UIFont.systemFont(ofSize: 12),
-      .foregroundColor: UIColor(hex: "899AB8"),
+      .foregroundColor: UIColor(red: 137/255.0, green: 154/255.0, blue: 184/255.0, alpha: 1.0),
       .paragraphStyle: {
         var style = NSMutableParagraphStyle()
         style.alignment = .center
@@ -80,7 +69,7 @@ public class LightboxConfig {
 
     public static var textAttributes: [NSAttributedStringKey: Any] = [
       .font: UIFont.boldSystemFont(ofSize: 16),
-      .foregroundColor: UIColor(hex: "FA2F5B"),
+      .foregroundColor: UIColor(red: 250/255.0, green: 47/255.0, blue: 91/255.0, alpha: 1.0),
       .paragraphStyle: {
         var style = NSMutableParagraphStyle()
         style.alignment = .center
@@ -93,11 +82,11 @@ public class LightboxConfig {
     public static var enabled = true
     public static var textColor = UIColor.white
     public static var ellipsisText = NSLocalizedString("Show more", comment: "")
-    public static var ellipsisColor = UIColor(hex: "899AB9")
+    public static var ellipsisColor = UIColor(red: 137/255.0, green: 154/255.0, blue: 185/255.0, alpha: 1.0)
 
     public static var textAttributes: [NSAttributedStringKey: Any] = [
       .font: UIFont.systemFont(ofSize: 12),
-      .foregroundColor: UIColor(hex: "DBDBDB")
+      .foregroundColor: UIColor(red: 219/255.0, green: 219/255.0, blue: 219/255.0, alpha: 1.0)
     ]
   }
 

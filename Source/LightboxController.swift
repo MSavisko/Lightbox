@@ -1,5 +1,4 @@
 import UIKit
-import Hue
 
 public protocol LightboxControllerPageDelegate: class {
 
@@ -71,7 +70,8 @@ open class LightboxController: UIViewController {
   open fileprivate(set) lazy var overlayView: UIView = { [unowned self] in
     let view = UIView(frame: CGRect.zero)
     let gradient = CAGradientLayer()
-    let colors = [UIColor(hex: "090909").alpha(0), UIColor(hex: "040404")]
+    let colors = [UIColor(red: 9/255.0, green: 9/255.0, blue: 9/255.0, alpha: 0.0),
+                  UIColor(red: 4/255.0, green: 4/255.0, blue: 4/255.0, alpha: 1.0)]
 
     view.addGradientLayer(colors)
     view.alpha = 0
