@@ -2,7 +2,7 @@ import UIKit
 
 class LoadingIndicator: UIView {
 
-  var indicator: UIActivityIndicatorView!
+  public var indicator: UIActivityIndicatorView!
 
   init() {
     super.init(frame: CGRect(x: 0, y: 0, width: 60, height: 60))

@@ -34,7 +34,10 @@ public class LightboxConfig {
 
   /// Indicator is used to show while image is being fetched
   public static var makeLoadingIndicator: () -> UIView = {
-    return LoadingIndicator()
+    let indicator = LoadingIndicator()
+    indicator.indicator.color = IndicatorLoading.color
+    indicator.backgroundColor = IndicatorLoading.backgroundColor
+    return indicator
   }
 
   public struct PageIndicator {
@@ -101,5 +104,10 @@ public class LightboxConfig {
   public struct Zoom {
     public static var minimumScale: CGFloat = 1.0
     public static var maximumScale: CGFloat = 3.0
+  }
+    
+  public struct IndicatorLoading {
+    public static var backgroundColor: UIColor = .darkGray
+    public static var color: UIColor = .white
   }
 }
