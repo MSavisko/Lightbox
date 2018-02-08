@@ -382,7 +382,7 @@ extension LightboxController: PageViewDelegate {
 
 extension LightboxController: HeaderViewDelegate {
 
-  func headerView(_ headerView: HeaderView, didPressDeleteButton deleteButton: UIButton) {
+  public func headerView(_ headerView: HeaderView, didPressDeleteButton deleteButton: UIButton) {
     deleteButton.isEnabled = false
 
     guard numberOfPages != 1 else {
@@ -409,7 +409,7 @@ extension LightboxController: HeaderViewDelegate {
     }
   }
 
-  func headerView(_ headerView: HeaderView, didPressCloseButton closeButton: UIButton) {
+  public func headerView(_ headerView: HeaderView, didPressCloseButton closeButton: UIButton) {
     closeButton.isEnabled = false
     presented = false
     dismissalDelegate?.lightboxControllerWillDismiss(self)

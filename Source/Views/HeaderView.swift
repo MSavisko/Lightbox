@@ -1,6 +1,6 @@
 import UIKit
 
-protocol HeaderViewDelegate: class {
+public protocol HeaderViewDelegate: class {
   func headerView(_ headerView: HeaderView, didPressDeleteButton deleteButton: UIButton)
   func headerView(_ headerView: HeaderView, didPressCloseButton closeButton: UIButton)
 }
