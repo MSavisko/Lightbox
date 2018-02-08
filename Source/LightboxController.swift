@@ -81,7 +81,7 @@ open class LightboxController: UIViewController {
 
   // MARK: - Properties
 
-  open fileprivate(set) var currentPage = 0 {
+  open var currentPage = 0 {
     didSet {
       currentPage = min(numberOfPages - 1, max(0, currentPage))
       footerView.updatePage(currentPage + 1, numberOfPages)
