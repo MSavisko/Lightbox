@@ -28,6 +28,7 @@ packed with all the features you expect:
 
 ## Table of Contents
 
+* [Changes from original](#changes-original)
 * [Usage](#usage)
   * [Controller](#controller)
   * [Delegates](#delegates)
@@ -38,6 +39,8 @@ packed with all the features you expect:
 * [Author](#author)
 * [Contributing](#contributing)
 * [License](#license)
+
+## Changes from original
 
 ## Usage
 
